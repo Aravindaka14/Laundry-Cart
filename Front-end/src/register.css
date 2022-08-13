@@ -9,7 +9,7 @@ p
     /* flex-wrap: nowrap; */
     /* align-content: space-between; */
     justify-content: space-between;
-    margin-top: 30px;
+  
 }
 #home
 {
@@ -18,7 +18,7 @@ p
 #Laundry
 {
 margin-left: 100px;    
-font: normal normal 900 20px/27px Avenir;
+font: normal normal 900 30px/27px Avenir;
 letter-spacing: 1.8px;
 color: #5861AE;
 text-transform: uppercase;
@@ -27,7 +27,7 @@ opacity: 1;
 #home
 {
     text-align: center;
-    font: normal normal normal 14px/19px Avenir;
+    font: normal normal normal 20px/19px Avenir;
     letter-spacing: 1.05px;
     color: #565657;
     text-transform: capitalize;
@@ -36,7 +36,7 @@ opacity: 1;
 #pricing
 {
     text-align: center;
-    font: normal normal normal 14px/19px Avenir;
+    font: normal normal normal 20px/19px Avenir;
     letter-spacing: 1.05px;
     color: #565657;
     text-transform: capitalize;
@@ -45,11 +45,19 @@ opacity: 1;
 #career
 {
 text-align: center;
-font: normal normal normal 14px/19px Avenir;
+font: normal normal normal 20px/19px Avenir;
 letter-spacing: 1.05px;
 color: #565657;
 text-transform: capitalize;
 opacity: 1;
+}
+#signin
+{
+    font: normal normal normal 20px/19px Avenir;
+background: #5861AE 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+opacity: 1;
+margin-right: 10px;
 }
 #divd
 {
@@ -91,9 +99,8 @@ margin-right: 350px;
 width:100px;
 height:20px
 }
-#reg
-{
-font: normal normal medium 32px/60px Avenir;
+text#reg {
+    font: normal normal medium 32px/60px Avenir;
 letter-spacing: 1.28px;
 color: #5861AE;
 text-transform: uppercase;
@@ -280,4 +287,50 @@ opacity: 1;
 #i2
 {
     margin-right: 11px;
+}
+co1
+{
+    display: flex;
+    flex-direction: row;
+}
+div#co2 {
+    position: absolute;
+    margin-left: 950px;
+    margin-top: 120px;
+}
+#e
+{
+    margin-top: 38px;
+}
+#fint
+{
+    position: absolute;
+    margin-left: 680px;
+    margin-top: 40px;
+}
+#last
+{
+font: normal normal medium 48px/60px Avenir;
+letter-spacing: 1.28px;
+color: #5861AE;
+text-transform: uppercase;
+opacity: 1;
+font-size: xx-large;
+}
+#foot
+{
+    text-align: center;
+background: #182838 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+opacity: 1;
+height: 7   0px;
+}
+#final
+{
+    text-align: center;
+    color: azure;
+    font: normal normal normal 12px/24px Avenir;
+letter-spacing: 0.12px;
+color: #FFFFFF;
+opacity: 1;
 }

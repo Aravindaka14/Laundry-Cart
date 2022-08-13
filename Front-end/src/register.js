@@ -63,6 +63,22 @@ const Register = ()=>
         <text id="career">Careers</text>
         <text id="signin">SignIn</text>
        </div>
+       <div id="fint">
+           <text id="last">Register</text>
+       </div>
+       <div id="co2">
+        <div id="co1 ">
+<input type="email" placeholder="Email" name="email"{...register('email')} id="e"></input>
+ <p>{errors.email?.message}</p>
+ <p>{error}</p>
+ <input type="text" name ="state"{...register("state")} placeholder="State" id="e"></input>
+ <p>{errors.state?.message}</p>
+ <input type="text" name="address" {...register("address")} placeholder="Address" id="e"></input>
+ <p>{errors.address?.message}</p>
+ <input type="password" name="password" {...register("password")} placeholder="Password" id="e"></input>
+ <p>{errors.password?.message}</p>
+ </div>
+       </div>
        <div id="lef">
         <text id="account">Already Have Account</text>
        </div>
@@ -75,44 +91,17 @@ const Register = ()=>
        <h6></h6>
        </div>
        <div id="register">
-        <text id="reg">Register</text>
         <div id="rt">
   <form onSubmit={handleSubmit(sendServer)} >
- <div id="row1">
- <input type="text" placeholder="Name" {...register("name")}></input>
+ <div id="co1 ">
+ <input type="text" placeholder="Name" {...register("name")}  id="e"></input>
  <p>{errors.name?.message}</p>
- <div id="space">
- <input type="email" placeholder="Email" name="email"{...register('email')}></input>
- <p>{errors.email?.message}</p>
- <p>{error}</p>
- </div>
- </div>
- <div id="row1">
- <input type="number" name="phoneno"{...register("phoneno")} placeholder="PhoneNumber"></input>
+ <input type="number" name="phoneno"{...register("phoneno")} placeholder="PhoneNumber" id="e"></input>
  <p>{errors.phoneno?.message}</p>
- <br></br>
- <div id="space">
- <input type="text" name ="state"{...register("state")} placeholder="State"></input>
- <p>{errors.state?.message}</p>
- </div>
- </div>
- <div id="row1">
- <input type="text" name="pincode" {...register("district")} placeholder="District"></input>
+ <input type="text" name="pincode" {...register("district")} placeholder="District" id="e"></input>
  <p>{errors.district?.message}</p>
- <br></br>
- <div id="space">
- <input type="text" name="address" {...register("address")} placeholder="Address"></input>
- <p>{errors.address?.message}</p>
- <br></br>
- </div>
- </div>
- <div id="row1">
- <input type="text" name="pincode" {...register("pincode")} placeholder="Pincode"></input>
+ <input type="text" name="pincode" {...register("pincode")} placeholder="Pincode" id="e"></input>
  <p>{errors.pincode?.message}</p>
- <div id="space">
- <input type="password" name="password" {...register("password")} placeholder="Password"></input>
- <p>{errors.password?.message}</p>
- </div>
  </div>
  <div id="check">
  <input type="checkbox" required ></input>
@@ -154,7 +143,9 @@ const Register = ()=>
         </div>
         </div>
        </div>
-       
+       <div id="foot">
+        <text id="final">2021 © Laundry</text>
+       </div>
   
   
   

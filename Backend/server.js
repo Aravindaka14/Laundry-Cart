@@ -8,6 +8,7 @@ const cors = require("cors");
 require('dotenv').config();
 const checkExistingMail = require("./reuseabaility");
 const salt = 7;
+const mongodb = process.env.ATLAS_URI
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
@@ -19,7 +20,7 @@ app.listen(3003,(err)=>{
         console.log("Server not started")
     }
 });
-mongoose.connect("mongodb://localhost/Laundry",()=>{
+mongoose.connect(mongodb,()=>{
     console.log("db connected");
 },(err)=>{
     console.log("db not connected")
