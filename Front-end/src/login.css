@@ -5,7 +5,7 @@
     /* flex-wrap: nowrap; */
     /* align-content: space-between; */
     justify-content: space-between;
-    margin-top: 30px;
+    
 }
 #home
 {
@@ -14,7 +14,7 @@
 #Laundry
 {
 margin-left: 100px;    
-font: normal normal 900 20px/27px Avenir;
+font: normal normal 900 30px/27px Avenir;
 letter-spacing: 1.8px;
 color: #5861AE;
 text-transform: uppercase;
@@ -23,7 +23,7 @@ opacity: 1;
 #home
 {
     text-align: center;
-    font: normal normal normal 14px/19px Avenir;
+    font: normal normal normal 20px/19px Avenir;
     letter-spacing: 1.05px;
     color: #565657;
     text-transform: capitalize;
@@ -32,7 +32,7 @@ opacity: 1;
 #pricing
 {
     text-align: center;
-    font: normal normal normal 14px/19px Avenir;
+    font: normal normal normal 20px/19px Avenir;
     letter-spacing: 1.05px;
     color: #565657;
     text-transform: capitalize;
@@ -41,7 +41,7 @@ opacity: 1;
 #career
 {
 text-align: center;
-font: normal normal normal 14px/19px Avenir;
+font: normal normal normal 20px/19px Avenir;
 letter-spacing: 1.05px;
 color: #565657;
 text-transform: capitalize;
@@ -49,11 +49,13 @@ opacity: 1;
 }
 #signin
 {
-
-background: #5861AE 0% 0% no-repeat padding-box;
-box-shadow: 0px 3px 6px #00000029;
-opacity: 1;
-margin-right: 50px;
+    font: normal normal medium 16px/22px Avenir;
+    letter-spacing: 1.2px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    opacity: 1;
+    background-color: #5861AE;
+    padding: 8px;
 }
 #laun
 {
