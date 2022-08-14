@@ -54,7 +54,7 @@ app.post("/login",(req,res)=>{
                // console.log(process.env.key)
                if(val)
                {
-                const authToken = jwt.sign(userdata[0].username,process.env.key);
+                const authToken = jwt.sign(userdata[0].email,process.env.key);
                 res.status(200).send({authToken});
                }
                else
@@ -68,4 +68,14 @@ app.post("/login",(req,res)=>{
             res.status(401).send({message:"invalid username"})
         }
     })
+})
+app.get("/homie",(req,res)=>{
+   // console.log(req.headers.authorization)
+   //does jwt verify get username or email
+   const email = jwt.verify(req.headers.authorization, process.env.key)
+   registerModals.find({email:email}).then((userdata)=>{
+    //console.log(userdata[0].password)
+    //console.log(userdata)
+    res.send({data :userdata})
+   })
 })
