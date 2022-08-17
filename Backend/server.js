@@ -7,7 +7,9 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 require('dotenv').config();
 const checkExistingMail = require("./reuseabaility");
+const orders = require('./ordersPage')
 const salt = 7;
+app.use("/orders", orders)
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
@@ -19,7 +21,7 @@ app.listen(3003,(err)=>{
         console.log("Server not started")
     }
 });
-mongoose.connect("mongodb://localhost/Laundry",()=>{
+mongoose.connect("mongodb+srv://Laundry-Cart:Laundry-Cart@laundry-cart.iqvsh4y.mongodb.net/?retryWrites=true&w=majority",()=>{
     console.log("db connected");
 },(err)=>{
     console.log("db not connected")
@@ -62,7 +64,6 @@ app.post("/login",(req,res)=>{
                 res.status(400).send({message:"invalid password"})
                }
              })
-             
         }else
         {
             res.status(401).send({message:"invalid username"})

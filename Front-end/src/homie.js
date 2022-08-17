@@ -1,7 +1,12 @@
 import axios from "axios"
 import { useEffect } from "react";
-const Homie = ()=>
+import {useNavigate} from "react-router-dom"
+import Head from "./head";
+import Body from "./body";
+import Footer from "./footer";
+const Orders = ()=>
 {
+    const navigate = useNavigate()
     const token = localStorage.getItem("authToken");
     useEffect(()=> {
         axios({
@@ -11,15 +16,32 @@ const Homie = ()=>
                 'Authorization': `${token}`
               }
         }).then((data)=> {
-            console.log(data.data.data[0]);
+           // console.log(data.data.data[0].email);
+           localStorage.setItem("email",data.data.data[0].email)
+           localStorage.setItem("name",data.data.data[0].username)
         }).catch((err)=> {
             console.log(err)
         })
     }, [])
-    return <>
-     Homie works
-    </>
-}
 
-export default Homie;
+    if(token)
+    {
+    return (
+        <>
+            <Head></Head>
+            <Body></Body>
+            <Footer></Footer>
+        </>
+    )
+ } else {
+     console.log("Authorization missing")
+     navigate("/login")
+     }
+
+  
+}
+export default Orders;
+
+
+
 

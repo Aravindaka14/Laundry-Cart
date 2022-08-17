@@ -28,7 +28,7 @@ const Login = ()=>{
           //auth token store it in a local storage and naviagte to home page 
           //console.log(res.data.authToken)
           localStorage.setItem("authToken",res.data.authToken)
-          window.location = "/homie"
+          window.location = "homie"
      }).catch((err)=>{
       //  console.log(err.response.status)
          if(err.response.status === 400)
